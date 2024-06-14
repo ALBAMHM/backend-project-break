@@ -216,22 +216,22 @@ const showDeleteProduct= async (req, res) => {
             <input type="hidden" name="_method" value="DELETE">
             
             <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" value="${product.nombre}" required><br>
+            <input type="text" id="nombre" name="nombre" value="${product.nombre}" disabled ><br>
         
             <label for="descripción">Descripción:</label>
-            <input type="text" id="descripción" name="descripción" value="${product.descripción}"><br>
+            <input type="text" id="descripción" name="descripción" value="${product.descripción}" disabled><br>
 
             <label for="imagen">Selecciona una imagen:</label>
-            <input type="file" id="imagen" name="imagen" value="${product.imagen}"><br>
+            <input type="file" id="imagen" name="imagen" value="${product.imagen}"  disabled><br>
 
             <label for="categoría">Categoría:</label>
-            <input type="text" id="categoría" name="categoría" value="${product.categoría}" required><br>
+            <input type="text" id="categoría" name="categoría" value="${product.categoría} "  disabled><br>
 
             <label for="talla">Talla:</label>
-            <input type="text" id="talla" name="talla" value="${product.talla}" required><br>
+            <input type="text" id="talla" name="talla" value="${product.talla}"  disabled><br>
 
             <label for="talla">Precio:</label>
-            <input type="number" id="precio" name="precio" value="${product.precio}" required><br>
+            <input type="number" id="precio" name="precio" value="${product.precio}" disabled><br>
         
             <button type="submit">Eliminar producto</button>
             </form>
