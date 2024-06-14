@@ -5,6 +5,9 @@ const PORT = process.env.PORT || 8080
 const compression = require('compression')
 const helmet = require('helmet')
 
+const path = require('path');
+
+app.use(express.static(path.join(__dirname, '../public/images')));
 
 app.use(express.urlencoded({ extended: true }));
 const { dbConnection } = require('./config/db')
