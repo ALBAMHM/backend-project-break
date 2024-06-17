@@ -58,7 +58,7 @@ router.get('/dashboard', showProducts)
 
 router.get('/dashboard/new', showNewProduct)
 
-router.post('/dashboard', upload, createProduct)
+router.post('/dashboard', upload,productValidationSchema, createProduct)
 
 router.get(
 	'/dashboard/:productId',
@@ -67,7 +67,6 @@ router.get(
 
 router.get(
 	'/dashboard/:productId/edit',
-	productValidationSchema,
 	showEditProduct,
 )
 router.put(
@@ -78,12 +77,10 @@ router.put(
 )
 router.get(
 	'/dashboard/:productId/delete',
-	productValidationSchema,
 	showDeleteProduct,
 )
 router.delete(
 	'/dashboard/:productId',
-	productValidationSchema,
 	deleteProduct,
 )
 
